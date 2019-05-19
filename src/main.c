@@ -30,7 +30,7 @@ void app_main()
     printf("%dMB %s flash\n", spi_flash_get_chip_size() / (1024 * 1024),
             (chip_info.features & CHIP_FEATURE_EMB_FLASH) ? "embedded" : "external");
 
-    for (int i = 12; i > 0; i--) {
+    for (int i = 14; i > 0; i--) {
         printf("Restarting in %d seconds...\n", i*5);
         vTaskDelay(5000 / portTICK_PERIOD_MS);
     }
